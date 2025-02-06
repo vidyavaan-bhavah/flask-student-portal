@@ -1,0 +1,31 @@
+<h1>Welcome, {{ student.student_name }}</h1>
+<p>Roll Number: {{ student.student_roll_number }}</p>
+<p>Fees: {{ student.student_fees }}</p>
+
+<h2>Attendance</h2>
+<ul>
+    {% for att in attendance %}
+    <li>{{ att.date }} - {{ att.status }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Homework</h2>
+<ul>
+    {% for hw in homework %}
+    <li>{{ hw.date }} - {{ hw.status }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Exams</h2>
+<ul>
+    {% for exam in exams %}
+    <li>{{ exam.exam_topic }} - Marks: {{ exam.exam_marks }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Fees</h2>
+<ul>
+    {% for fee in fees %}
+    <li>Amount: {{ fee.amount }} - {{ fee.payment_mode }}</li>
+    {% endfor %}
+</ul>
